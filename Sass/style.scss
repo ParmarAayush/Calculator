@@ -1,0 +1,86 @@
+@import url("../assets/fonts/fonts.css");
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3rem;
+    background-color: black;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+
+    .container {
+        max-width: 430px;
+        background-color: #000;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        .answer {
+            position: relative;
+            height: inherit;
+
+            .text {
+                font-family: "Roboto";
+                font-size: 5rem;
+                font-weight: 100;
+                font-style: normal;
+                font-display: swap;
+                position: absolute;
+                bottom: 0;
+                right: 15px;
+                background-color: #000;
+                color: #ECECEC;
+                text-align: right;
+                border: none;
+                outline: none;
+            }
+        }
+
+        .btns {
+            padding: 10px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+
+            .btn {
+                font-size: 2rem;
+                padding: 16px;
+                margin: 5px;
+                color: #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                background-color: #333333;
+                transition: filter 0.3s;
+
+                &:active,
+                &:focus {
+                    filter: brightness(120%);
+                }
+            }
+
+            .two-col {
+                grid-column: 1 / 3;
+                border-radius: 2.5em;
+            }
+
+            .grey {
+                background-color: #A5A5A5;
+            }
+
+            .y {
+                background-color: #FF9F0C;
+            }
+        }
+    }
+}
