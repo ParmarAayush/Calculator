@@ -10,6 +10,7 @@ Array.from(btn).forEach((buttons) => {
             document.querySelector(".text").value = str;
         }
         else if (e.target.innerHTML == "=") {
+            console.log(str);
             str = eval(str);
             document.querySelector(".text").value = str;
         } else if (e.target.innerHTML == "C") {
@@ -23,6 +24,10 @@ Array.from(btn).forEach((buttons) => {
         }
     })
 })
+// document.addEventListener('keypress', calculate)
+function calculate() {
+    inputField = document.getElementsByClassName("text").value;
+    str = eval(str);
+    document.querySelector(".text").value = str;
 
-
-
+}
