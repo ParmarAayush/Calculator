@@ -1,6 +1,6 @@
 let str = "";
 let btn = document.querySelectorAll(".btn");
-Array.from(btn).forEach((buttons) => {
+btn.forEach((buttons) => {
     inputField = document.getElementsByClassName("text").value;
     console.log(inputField);
     buttons.addEventListener("click", (e) => {
@@ -16,8 +16,7 @@ Array.from(btn).forEach((buttons) => {
         }
         else if (e.target.innerHTML == "=") {
             console.log(str);
-            str = eval(str);
-            document.querySelector(".text").value = str;
+            calculate();
         } else if (e.target.innerHTML == "C") {
             str = ""
             document.querySelector(".text").value = str;
