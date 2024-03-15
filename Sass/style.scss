@@ -28,7 +28,7 @@ section {
         .answer {
             position: relative;
             height: inherit;
-            overflow: scroll;
+            overflow: hidden;
 
             .text {
                 font-family: "Roboto";
@@ -44,6 +44,10 @@ section {
                 text-align: right;
                 border: none;
                 outline: none;
+            }
+
+            &:hover {
+                overflow: auto;
             }
         }
 
